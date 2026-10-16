@@ -1,8 +1,8 @@
 # JXYCOI Display Better（育才信奥界面美化脚本）
 
-简介
+简介：
 
-参考洛谷美化插件（luogu display better 思路）制作的 Tampermonkey（篡改猴）用户脚本，用于美化 www.jxycoi.cn（育才信奥 OJ）界面。
+一个用于美化育才信奥 OJ界面的篡改猴用户脚本。
 
 核心能力：
 
