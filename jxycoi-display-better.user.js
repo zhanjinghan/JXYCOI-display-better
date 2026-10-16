@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         JXYCOI Display Better
-// @namespace    https://www.jxycoi.cn/
+// @namespace    https://github.com/zhanjinghan
 // @version      1.1.0
-// @description  育才信奥界面美化脚本：支持洛谷主题导入/导出、自制主题、背景模糊与卡片透明度、图片设置、去除首页图片、卡片化、彩蛋主题
+// @description  育才信奥界面美化脚本
 // @author       zhanjinghan
 // @icon         https://cdn.jxycoi.cn/dist/favicon.ico
 // @match        https://www.jxycoi.cn/*
@@ -871,7 +871,7 @@ ${cfg.customCSS || ''}
 
     P.appendChild(sectionTitle('导入 / 导出'));
     const importWrap = el('div', { style: 'margin-bottom:8px;' }, [
-      el('textarea', { id: 'cfg-import', placeholder: '粘贴洛谷主题 JSON / 本脚本导出 JSON / 彩蛋口令（艾莲）', style: 'width:100%; height:56px; box-sizing:border-box; font-size:12px; border:1px solid #d0d7de; border-radius:6px; padding:6px;' }),
+      el('textarea', { id: 'cfg-import', placeholder: '粘贴洛谷主题 JSON / 本脚本导出 JSON', style: 'width:100%; height:56px; box-sizing:border-box; font-size:12px; border:1px solid #d0d7de; border-radius:6px; padding:6px;' }),
       el('div', { style: 'display:flex; gap:6px; margin-top:6px;' }, [
         el('button', { style: btnStyle(false), onclick: () => {
           try {
@@ -884,7 +884,7 @@ ${cfg.customCSS || ''}
           }
         } }, ['导入主题']),
         el('button', { style: btnStyle(false), onclick: () => {
-          copyText(exportTheme()).then(ok => toast(ok ? '主题已复制到剪贴板（洛谷格式）' : '复制失败，请手动选择文本复制', !ok));
+          copyText(exportTheme()).then(ok => toast(ok ? '主题已复制到剪贴板' : '复制失败，请手动选择文本复制', !ok));
         } }, ['导出主题'])
       ])
     ]);
